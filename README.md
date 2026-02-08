@@ -1,3 +1,7 @@
+link of deployement of project
+https://idyllic-gelato-9541d8.netlify.app/
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
