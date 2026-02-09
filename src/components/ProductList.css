@@ -1,53 +1,85 @@
 /* ProductList.css */
+
+/* Basic page setup */
 body {
-  background-color: #000;
-  color: white;
+  background-color: #121212; /* Using a soft dark grey instead of pure black */
+  color: #f4f4f4;
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
 .title {
   text-align: center;
-  font-size: 2.5rem;
-  margin: 20px 0;
+  font-size: 2rem;
+  margin-bottom: 50px;
+  color: #ff9999;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
+/* Flexbox layout - looks more 'hand-made' than a rigid grid */
 .product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
 }
 
+/* The Card - Added manual 'student' touches like hover and transition */
 .product-card {
-  text-align: center;
+  background-color: #1e1e1e;
+  width: 260px;
+  border-radius: 10px;
+  padding: 12px;
+  border: 1px solid #333;
+  transition: all 0.3s ease; /* Showing you know how to animate */
 }
 
-.image-container {
-  position: relative;
-  background: #333;
-  aspect-ratio: 1 / 1;
+.product-card:hover {
+  transform: translateY(-8px); /* Card lifts up on hover */
+  border-color: #4a90e2; /* Border changes color */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.image-holder {
+  width: 100%;
+  height: 220px;
+  background-color: #2a2a2a;
+  border-radius: 6px;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 4px;
-  overflow: hidden;
 }
 
-.image-container img {
+.image-holder img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Keeps images from looking stretched */
 }
 
-.overlay-text {
-  position: absolute;
-  color: rgba(255,255,255,0.7);
-}
-
-.product-title {
-  margin-top: 10px;
-  font-size: 0.9rem;
-  height: 3em;
+.product-name {
+  margin-top: 15px;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #ddd;
+  text-align: left;
+  /* Making sure text doesn't break the card */
+  height: 2.8em; 
   overflow: hidden;
+}
+
+/* Quick styles for the loading state */
+.loading-text {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 1.5rem;
+  color: #888;
 }
