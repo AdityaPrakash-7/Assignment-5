@@ -1,5 +1,5 @@
 link of deployement of project
-https://idyllic-gelato-9541d8.netlify.app/
+https://boisterous-platypus-506b1f.netlify.app/ 
 
 
 # React + Vite
